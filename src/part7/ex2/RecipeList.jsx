@@ -4,22 +4,24 @@ export default function RecipeList() {
   return (
     <div>
       <h1>Recipes</h1>
-      <ul>
-        <RecipeItem />
-      </ul>
+      {recipes.map((recipe) => (
+        // 모든 recipe의 props 전달
+        // key가 주변 배열에서 필요함
+        <Recipe {...recipe} key={recipe.id} />
+      ))}
     </div>
   )
 }
 
-function RecipeItem() {
-  return recipes.map((recipe, index) => (
-    <li key={index}>
-      <h2 className="bg-amber-400">{recipe.name}</h2>
-      <ul key={index}>
-        {recipe.ingredients.map((ingredient) => (
+function Recipe({ name, ingredients }) {
+  return (
+    <div>
+      <h2>{name}</h2>
+      <ul>
+        {ingredients.map((ingredient) => (
           <li key={ingredient}>{ingredient}</li>
         ))}
       </ul>
-    </li>
-  ))
+    </div>
+  )
 }
