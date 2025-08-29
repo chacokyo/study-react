@@ -1,0 +1,6 @@
+- 추가 → concat / spread
+- 삭제 → filter
+- 수정/토글 → map
+- 찾기 → find, findIndex
+- 정렬 → sort (복사 후 사용)
+- 집계 → reduce
