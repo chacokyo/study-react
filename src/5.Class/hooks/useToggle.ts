@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 // 초기값은 true로, 타입은 boolean
 export default function useToggleState(initialValue: boolean = true) {
